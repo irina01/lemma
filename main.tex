@@ -1,0 +1,37 @@
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc} 
+\usepackage[russian]{babel} 
+\usepackage{amsmath} 
+\usepackage{hyperref} % Включить ссылки в PDF 
+\numberwithin{equation}{section} % Изменить нумерацию формул (4) -> (4.2) 
+\begin{document} 
+\tableofcontents % Вставить содержание
+\newpage 
+\subsubsection{Лемма Бёрнсайда} 
+Пусть группа G действует на конечном множестве D. Элементы ~$d_1$ и ~$d_2$ из D назовём эквивалентным, если ~$d_1$ = g~$d_2$ для некоторого g из G. Нетрудно видеть, что множество D под действием группы G распадается на классы эквивалентности, состоящие из попарно эквивалентных элементов. Число классов эквивалентности можно найти при помощи следующей леммы Бёрнсайда. 
+
+\begin{subequations} 
+
+\textbf{Лемма 4.2} 
+\textit{Пусть группа G действует на конечном множестве D. Тогда для N - числа классов эквивалентности, порождаемых на множестве D действием группы G, справедливо равенство} 
+$$N = \frac{1}{|G|} \sum \limits_{g\ni G} \psi(g),$$ 
+\textit{где $\psi (g)$ - число элементов d множества D таких, что $gd = d$.} 
+\label{eq.simple} 
+\end{subequations} 
+
+{\scshape Доказательство.} 
+\textup{Введём функцию $\psi (d, g)$ так, что} 
+\[ 
+\psi(d, g) = 
+\begin{cases} 
+1, & \text{если $gd = d$;}\\ 
+0, & \text{если $gd \neq d$.} 
+\end{cases} 
+\] 
+
+\textit{Тогда учитывая предыдущую лемму,} 
+{$ \sum \limits_{g \ni G} \psi(g) = \sum \limits_{g\ni G} \sum \limits_{d\ni D} \psi (d, g) = \sum \limits_{~O_{r_{i}}} \sum \limits_{d \ni ~O_{r_{i}}} \sum \limits_{g \ni G} \psi (d, g) $} 
+
+{\rm Разделив левую и правую части получившегося равенства на |G|, получаем требуемую формулу для N. Лемма доказана.} 
+
+\end{document}
